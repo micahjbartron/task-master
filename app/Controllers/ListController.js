@@ -7,6 +7,7 @@ function _drawLists() {
   let template = ''
   list.forEach(l => template += l.Template)
   document.getElementById("lists").innerHTML = template
+  //document.getElementById("color").innerHTML = colorSelector
 }
 
 //Public
@@ -21,6 +22,7 @@ export default class ListController {
     event.preventDefault();
     let rawList = {
       listName: event.target.listName.value
+
     }
     ListService.createList(rawList)
     _drawLists()
@@ -31,7 +33,7 @@ export default class ListController {
   }
   addItem(event, listId) {
     event.preventDefault();
-    let item = event.target.listItem.value
+    let item = event.target.item.value
     try {
       ListService.addItem(item, listId)
     }
@@ -41,7 +43,10 @@ export default class ListController {
     _drawLists()
   }
 
-
+  deleteItem(listId, index) {
+    ListService.deleteItem(listId, index)
+    _drawLists();
+  }
 
 
 }

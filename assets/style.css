@@ -6,8 +6,43 @@ body{
 
 main {
   flex-grow: 1;
+  background-image: url(abstract.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+#background-pic{
+  background-image: url("abstract.jpg");
+  background-position: center center;
+  background-size: cover;
 }
 
 .action {
   cursor: pointer;
+}
+
+#red{
+background-color: red;
+}
+
+#orange{
+  background-color: rgb(255, 145, 0);
+}
+
+#yellow{
+  background-color: yellow;
+}
+#green{
+  background-color: green;
+}
+
+#blue{
+  background-color: blue;
+}
+
+#purple{
+  background-color: indigo;
+}
+
+#pink{
+  background-color: rgb(255, 66, 138);
 }
