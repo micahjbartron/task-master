@@ -5,7 +5,8 @@ import _store from "../store.js";
 function _drawLists() {
   let list = _store.State.lists
   let template = ''
-  list.forEach(l => template += Template)
+  list.forEach(l => template += l.Template)
+  document.getElementById("lists").innerHTML = template
 }
 
 //Public
@@ -16,4 +17,32 @@ export default class ListController {
   }
 
   //TODO: Your app will need the ability to create, and delete both lists and listItems
+  createList(event) {
+    event.preventDefault();
+    let rawList = {
+      listName: event.target.listName.value
+    }
+    ListService.createList(rawList)
+    _drawLists()
+  }
+  deleteList(id) {
+    ListService.deleteList(id)
+    _drawLists()
+  }
+  addItem(event, listId) {
+    event.preventDefault();
+    let item = event.target.listItem.value
+    try {
+      ListService.addItem(item, listId)
+    }
+    catch (error) {
+      alert(error.message)
+    }
+    _drawLists()
+  }
+
+
+
+
 }
+console.log("hello from the controller");
