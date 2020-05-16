@@ -12,20 +12,20 @@
 
 <body>
   <header class="container-fluid">
-    <div class="row bg-info text-light text-center mb-2">
+    <div class="row bg-info text-light text-center">
       <div class="col">
         <H1>Task Master</H1>
       </div>
     </div>
   </header>
-  <main class="container-fluid">
-    <div id="background-pic" class="row">
+  <main id="main-color" class="container-fluid">
+    <div id="background-pic" class="row mt-2">
       <div class="col border-outline ">
         <form onsubmit="app.listController.createList(event)">
           <div class="form-group d-flex">
             <input type="text" class="form-control" name="listName" id="listName" aria-describedby="helpId"
               placeholder="List Name..." required>
-            <button type="submit" class="btn btn-outline-secondary ml-1">Create</button>
+            <!-- <button type="submit" class="btn btn-outline-secondary ml-1">Create</button> -->
             <div class="btn-group">
               <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">

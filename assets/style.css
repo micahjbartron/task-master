@@ -6,15 +6,10 @@ body{
 
 main {
   flex-grow: 1;
-  background-image: url(abstract.jpg);
-  background-position: center center;
-  background-size: cover;
+  background-color: lightblue;
 }
-#background-pic{
-  background-image: url("abstract.jpg");
-  background-position: center center;
-  background-size: cover;
-}
+
+
 
 .action {
   cursor: pointer;
