@@ -20,27 +20,37 @@
   </header>
   <main id="main-color" class="container-fluid">
     <div id="background-pic" class="row mt-2">
-      <div class="col border-outline ">
+      <div class="col-6 border-outline ">
         <form onsubmit="app.listController.createList(event)">
           <div class="form-group d-flex">
             <input type="text" class="form-control" name="listName" id="listName" aria-describedby="helpId"
               placeholder="List Name..." required>
-            <!-- <button type="submit" class="btn btn-outline-secondary ml-1">Create</button> -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+            <button type="submit" class="btn btn-outline-secondary ml-1">Create</button>
+            <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">color</label>
+            <select class="custom-select mr-sm-2 text-center" name="listColor" id="inlineFormCustomSelect">
+              <option selected value="bg-info" class="bg-info">color</option>
+              <option value="red" class="red">red</option>
+              <option value="orange" class="orange">orange</option>
+              <option value="green" class="green">green</option>
+              <option value="blue" class="blue">blue</option>
+              <option value="pink" class="pink">pink</option>
+              <option value="purple" class="purple">purple</option>
+            </select>
+            <!-- <div class="btn-group">
+              <select type="select" name="listColor" class="btn btn-outline-secondary dropdown-toggle ml-1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 List Color
-              </button>
+              </select>
               <div class="dropdown-menu dropdown-menu-right text-center">
-                <button id="red" class="dropdown-item text-light" type="button submit">red</button>
-                <button id="orange" class="dropdown-item text-light" type="button submit">orange</button>
-                <button id="green" class="dropdown-item text-light" type="button submit">green</button>
-                <button id="blue" class="dropdown-item text-light" type="button submit">blue</button>
-                <button id="pink" class="dropdown-item text-light" type="button submit">pink</button>
-                <button id="purple" class="dropdown-item text-light" type="button submit">purple</button>
+                <option value="red" name="listColor" class="dropdown-item text-light red" type="select">red</option>
+                <option id="orange" class="dropdown-item text-light orange" type="select">orange</option>
+                <option id="green" class="dropdown-item text-light green" type="select">green</option>
+                <option id="blue" class="dropdown-item text-light blue" type="select">blue</option>
+                <option id="pink" class="dropdown-item text-light pink" type="select">pink</option>
+                <option id="purple" class="dropdown-item text-light purple" type="select">purple</option>
 
               </div>
-            </div>
+            </div> -->
           </div>
 
         </form>

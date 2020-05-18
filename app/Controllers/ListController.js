@@ -7,7 +7,7 @@ function _drawLists() {
   let template = ''
   list.forEach(l => template += l.Template)
   document.getElementById("lists").innerHTML = template
-  //document.getElementById("color").innerHTML = colorSelector
+  //document.getElementById("color").innerHTML = 
 }
 
 //Public
@@ -20,13 +20,18 @@ export default class ListController {
   //TODO: Your app will need the ability to create, and delete both lists and listItems
   createList(event) {
     event.preventDefault();
+    //let colorId = document.querySelector('#color')
     let rawList = {
-      listName: event.target.listName.value
-
+      listName: event.target.listName.value,
+      listColor: event.target.listColor.value
     }
+
+    console.log(rawList)
     ListService.createList(rawList)
+    event.target.listName.value = ""
     _drawLists()
   }
+
   deleteList(id) {
     ListService.deleteList(id)
     _drawLists()

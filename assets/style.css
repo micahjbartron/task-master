@@ -15,29 +15,29 @@ main {
   cursor: pointer;
 }
 
-#red{
-background-color: red;
+.red{
+background-color: #ff0000;
 }
 
-#orange{
-  background-color: rgb(255, 145, 0);
+.orange{
+  background-color: #ff9100;
 }
 
-#yellow{
-  background-color: yellow;
+.yellow{
+  background-color: #ffff00;
 }
-#green{
-  background-color: green;
-}
-
-#blue{
-  background-color: blue;
+.green{
+  background-color: #008000;
 }
 
-#purple{
-  background-color: indigo;
+.blue{
+  background-color: #0000ff;
 }
 
-#pink{
-  background-color: rgb(255, 66, 138);
+.purple{
+  background-color: #4b0082;
+}
+
+.pink{
+  background-color: #ff428a;
 }

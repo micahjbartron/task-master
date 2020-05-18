@@ -16,7 +16,7 @@ export default class List {
   <div class="card shadow">
     <div class="card-body d-flex flex-column">
       <i class="fas fa-times text-danger align-self-end action" onclick="app.listController.deleteList('${this.id}')"></i>
-      <h4 id="color" class="card-title bg-info text-light text-center">${this.listName}</h4>
+      <h4 id="color" class="card-title text-light text-center ${this.listColor}">${this.listName}</h4>
       <ul class="pl-3">
         ${this.ListItemsTemplate}
       </ul>
